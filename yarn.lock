@@ -2,20 +2,6 @@
 # yarn lockfile v1
 
 
-"@actions/core@^1.2.6":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.6.0.tgz#0568e47039bfb6a9170393a73f3b7eb3b22462cb"
-  integrity sha512-NB1UAZomZlCV/LmJqkLhNTqtKfFXJZAUPcfl/zqG7EfsQdeUJtaWO98SGbuQ3pydJ3fHl2CvI/51OKYlCYYcaw==
-  dependencies:
-    "@actions/http-client" "^1.0.11"
-
-"@actions/http-client@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-1.0.11.tgz#c58b12e9aa8b159ee39e7dd6cbd0e91d905633c0"
-  integrity sha512-VRYHGQV1rqnROJqdMvGUbY/Kn8vriQe/F9HR2AlYHzmKuM/p3kjNuXhmdBfcVgsvRWTz5C5XW5xvndZrVBuAYg==
-  dependencies:
-    tunnel "0.0.6"
-
 "@eslint/eslintrc@^1.2.0":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.2.1.tgz#8b5e1c49f4077235516bc9ec7d41378c0f69b8c6"
@@ -287,29 +273,6 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
-
-eslint-formatter-gha@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-formatter-gha/-/eslint-formatter-gha-1.4.1.tgz#e787a68171c5486fb7e8b514224a722a5f59a8ec"
-  integrity sha512-c2L/p4Xtnzlb3ascN4vERcXTMNPePedxZNRZcKG19DDpViBIG1WLMyMIeC2FSW7yGLBANZNb9N66sV2PDCdIqQ==
-  dependencies:
-    "@actions/core" "^1.2.6"
-    eslint-formatter-json "^8.0.0"
-    eslint-formatter-stylish "^8.0.0"
-
-eslint-formatter-json@^8.0.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-formatter-json/-/eslint-formatter-json-8.3.0.tgz#5674d87c80e23a92bbaecc906b1c153e67e547f9"
-  integrity sha512-zMYHg0iA4AH534aUJyh7PR+f7xzAsd0kLEFzo4U3TN60l3zt5/7Ukbv2VmQcSl/bOFdOkhRhB9+U52plxp8o8Q==
-
-eslint-formatter-stylish@^8.0.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-formatter-stylish/-/eslint-formatter-stylish-8.3.0.tgz#554d8d0ef666605ab22880f356d1b74d900f4d41"
-  integrity sha512-4QKzT/NPD6VjFDhdUHnp/6bRODXg2G44SCEC4tc8MMErBffHojbVzcje0H7ql7aJQ277OBGCpe8mjjiNmdCxBg==
-  dependencies:
-    chalk "^4.0.0"
-    strip-ansi "^6.0.1"
-    text-table "^0.2.0"
 
 eslint-scope@^5.1.1:
   version "5.1.1"
@@ -819,11 +782,6 @@ tsutils@^3.21.0:
   integrity sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==
   dependencies:
     tslib "^1.8.1"
-
-tunnel@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
-  integrity sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
