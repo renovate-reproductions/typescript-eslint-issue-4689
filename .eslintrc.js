@@ -3,17 +3,11 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ['typescript-enum'],
   extends: [
     'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:promise/recommended',
-    'prettier',
   ],
   parserOptions: {
     ecmaVersion: 9,
@@ -22,22 +16,6 @@ module.exports = {
     extraFileExtensions: ['.mjs'],
   },
   rules: {
-    /*
-     * checks done by typescript.
-     *
-     * https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#eslint-plugin-import
-     * required for esm check
-     */
-    'import/default': 2,
-    'import/named': 2,
-    'import/namespace': 2,
-    'import/no-named-as-default-member': 0,
-    'import/no-extraneous-dependencies': [
-      'error',
-      { devDependencies: ['test/**/*', '**/*.spec.ts'] },
-    ],
-    'import/prefer-default-export': 0, // no benefit
-
     // other rules
     'consistent-return': 'error',
     eqeqeq: 'error',
@@ -52,17 +30,6 @@ module.exports = {
         ignoreDeclarationSort: true, // conflicts with our other import ordering rules
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      },
-    ],
-
-    // mdast is a types only package `@types/mdast`
-    'import/no-unresolved': ['error', { ignore: ['^mdast$'] }],
-    'import/order': [
-      'error',
-      {
-        alphabetize: {
-          order: 'asc',
-        },
       },
     ],
 
@@ -101,7 +68,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 0, // thousands of errors :-/
 
     '@typescript-eslint/restrict-template-expressions': [
-      1,
+      2,
       { allowNumber: true, allowBoolean: true },
     ],
     '@typescript-eslint/restrict-plus-operands': 2,
@@ -116,20 +83,6 @@ module.exports = {
 
     '@typescript-eslint/unbound-method': 2,
     '@typescript-eslint/ban-types': 2,
-
-    'typescript-enum/no-const-enum': 2,
-    'typescript-enum/no-enum': 2,
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts'],
-    },
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-        project: 'tsconfig.lint.json',
-      },
-    },
   },
   overrides: [
     {
