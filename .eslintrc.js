@@ -10,13 +10,10 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   parserOptions: {
-    ecmaVersion: 9,
-    tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
   rules: {
-
-    // TODO: removing these lines removes the lint errors
+    // TODO: removing these two lines to remove the lint error
     '@typescript-eslint/no-unsafe-return': 0,
     '@typescript-eslint/no-unsafe-argument': 0,
 
@@ -29,7 +26,7 @@ module.exports = {
   overrides: [
     {
       // files to check, so no `--ext` is required
-      files: ['**/*.{js,mjs,cjs,ts}'],
+      files: ['**/*.ts'],
     },
   ],
 };
